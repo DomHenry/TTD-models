@@ -9,3 +9,8 @@ For the bird data used in the main text, see the Dryad data repository: XXXX
 If you will be using this code, please cite this github repository: XXXXXXXX
 
 Please cite this work as: Henry et al. 2019. Can time-to-detection models with fewer survey replicates provide a robust alternative to traditional site-occupancy models? Methods in Ecology and Evolution.
+
+## File descriptions
+
+**JAGS_sim_DND.R** is the JAGS model definition the detection/non-detection occupancy model used in the simulation analysis.
+
