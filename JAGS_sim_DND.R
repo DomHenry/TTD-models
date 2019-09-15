@@ -1,3 +1,14 @@
+# ====================================================================================
+#
+#   JAGS_sim_TTD.R
+#
+#   JAGS formulation for hierarchical multi-survey detection/non-detection occupancy 
+#   model used in simulations (sim_runs.R)
+#  
+#   Henry et al. 2019. 
+#
+# ====================================================================================
+
 sink("dnd_sim.txt")
 cat("
     model {
