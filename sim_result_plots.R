@@ -97,7 +97,6 @@ combo_labeller <- function(variable,value){
   return(combo_names[value])
 }
 
-
 # Create geometery for the shaded panels
 shading <- tibble(min = seq(from = 0.5, 
                             to = max(as.numeric(as.factor(plotdf$protocol))), 
@@ -113,6 +112,7 @@ plotdf <- plotdf %>%
   mutate(protocol = fct_relevel(protocol, 
                                 "ttd1", "dnd2", "ttd2","dnd4", "ttd4","dnd8", "ttd8"))
 
+# MSE and SD plots --------------------------------------------------------
 plotsims1 <- function(meas, para, ylims, label){
   
   p <- plotdf %>% 
@@ -152,8 +152,7 @@ plotsims1(meas = "sd", para = "p", ylims = c(0,0.4),label = "Parameter standard 
 # Fig. S2
 plotsims1(meas = "sd", para = "psi", ylims = c(0,0.4),label = "Parameter standard deviation (occupancy)")
 
-
-
+# Mean parameter plots ----------------------------------------------------
 plotsims2 <- function(para, label){
   
   p <- plotdf %>% 

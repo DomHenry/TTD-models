@@ -2,9 +2,8 @@
 #
 #   sim_runs.R
 #
-#   Code used to run simulations comparing time to detection and 
-#   detection/non-detection occupancy models under different survey replicates
-#   used in simulations (sim_runs.R)
+#   Code used to run simulations comparing time-to-detection and 
+#   detection/non-detection occupancy models under a range of survey replicates.
 #  
 #   Henry et al. 2019. 
 #
@@ -54,7 +53,6 @@ arr_list_ttd <- list(occ_sim_results2,occ_sim_results3,occ_sim_results4)
 # Combine to list of DND arrays
 arr_list_dnd <- list(occ_sim_results5,occ_sim_results6,occ_sim_results7)
 
-
 # Create occupancy and detection combinations -----------------------------
 psi_vec <- c(0.3,0.6)
 p_vec <- c(0.1,0.3,0.6)
@@ -63,11 +61,11 @@ combos <- expand.grid(dim_n4,dim_n5)
 combo_list <- paste(combos[,1],combos[,2],sep= ".")
 
 
-# Assign number of survey replicates in each for each protocol ------------
+# Assign number of survey replicates for each protocol --------------------
 n_survs_ttd <- c(2,4,8) 
 n_surs_dnd <- c(2,4,8)
 
-# Assign JAGS chain values --------------------------------------------------
+# Assign JAGS run values --------------------------------------------------
 
 # Full run
 ni <- 80000 # iterations
@@ -76,10 +74,10 @@ nc <- 3     # chains
 nt <- 20    # thinning rate
 
 # Testing phase
-ni <- 10000
-nb <- 3000
-nc <- 3
-nt <- 20
+# ni <- 10000
+# nb <- 3000
+# nc <- 3
+# nt <- 20
 
 # Start simulations -------------------------------------------------------
 for(i in 1:nsims){
@@ -92,10 +90,10 @@ for(i in 1:nsims){
       ## TIME TO DETECTION MODELS ##
       ## -------------------------##
       
-      # Simulate dataset for 8 TTD surveys
+      # Simulate dataset for 8 TTD surveys (50 sites, maximum of 10 minutes survey duration)
       sim_data <- sim_ttd_data(M = 50, mean.psi = psi_vec[s],mean.lambda = p_vec[p], Tmax = 10, n_surveys = 8)
       
-      # Create subsets of sample data without replacement
+      # Create random subsets of sample data without replacement
       ran8 <- c(1:8)         # TTD8
       ran4 <- sample(ran8,4) # TTD4
       ran2 <- sample(ran4,2) # TTD2
@@ -164,13 +162,13 @@ for(i in 1:nsims){
       ## DETECTION/NON-DETECTION MODELS ##
       ## ------------------------------ ##
       
-      # Simulate dataset for 8 DND surveys
+      # Simulate dataset for 8 DND surveys (50 sites)
       sim_data <- AHMbook::simOcc(M = 50, J = 8, mean.occupancy = psi_vec[s], mean.detection = p_vec[p],
                                   beta1 = 0, beta2 = 0, beta3 = 0,time.effects = c(0, 0), # Supress covariate effects
                                   alpha1 = 0, alpha2 = 0, alpha3 = 0, sd.lp = 0,          # Supress covariate effects
                                   b = 0, show.plot = F)
       
-      # Need to create subsets of sample data without replacement
+      # Create random subsets of sample data without replacement
       ran8 <- c(1:8)         # DND8
       ran4 <- sample(ran8,4) # DND4
       ran2 <- sample(ran4,2) # DND2

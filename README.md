@@ -1,8 +1,8 @@
 # TTD-models
 
-The material provided here is the supplementary material for *Henry, D.A.W., Lee,. A.T.K. & Altwegg, R. (2019). Can time-to-detection models with fewer survey replicates provide a robust alternative to traditional site-occupancy models? Methods in Ecology and Evolution* 
+The material provided here is some of the Supporting Information for *Henry, D.A.W., Lee, A.T.K. & Altwegg, R. (2019). Can time-to-detection models with fewer survey replicates provide a robust alternative to traditional site-occupancy models? Methods in Ecology and Evolution* 
 
-The R code and JAGS model definitions are provided to reproduce the simulations and graphical outputs. We also define the models used to analyses the field data.
+The R code and JAGS model definitions are provided to reproduce the simulations and graphical outputs. We also define the models used to analyse the field data.
 
 For the bird point count data used in the occupancy models, see the Dryad data repository: XXX
 
@@ -13,7 +13,7 @@ Please cite this work as: XXX
 
 ## Run the simulation analysis
 
-`sim_runs.R` is the primary file to recreate simulations  
+`sim_runs.R` is the primary code file to run the simulation analysis
 
 `sim_ttd_data.R` is a function to generate time-to-detection data used in `sim_runs.R`.  
 

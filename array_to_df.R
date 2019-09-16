@@ -9,7 +9,7 @@
 #
 # ====================================================================================
 
-arr2df <- function(combo_list,simarray,int, coln,measure) {
+arr2df <- function(combo_list,simarray,int,coln,measure) {
   
   dflist <- list()
   
