@@ -5,13 +5,13 @@ The material provided here is part of the Supporting Information for our paper o
 The R code and JAGS model definitions are provided to reproduce the simulations and graphical outputs. We also define the models used to analyse the field data. For the bird point count data used in the occupancy models, see the Dryad data repository: 
 https://doi.org/10.5061/dryad.msbcc2fv7
 
-Please use the following citations:
+**Please use the following citations:**
 
-Paper: *Henry, D.A.W., Lee, A.T.K. & Altwegg, R. (2020). Can time-to-detection models with fewer survey replicates provide a robust alternative to traditional site-occupancy models? Methods in Ecology and Evolution* 
+**Paper:** *Henry, D.A.W., Lee, A.T.K. & Altwegg, R. (2020). Can time-to-detection models with fewer survey replicates provide a robust alternative to traditional site-occupancy models? Methods in Ecology and Evolution* 
 
-Bird data: *Henry, D.A.W., Lee, A.T.K. & Altwegg, R. (2020). Data from: Can time-to-detection models with fewer survey replicates provide a robust alternative to traditional site-occupancy models? Methods in Ecology and Evolution doi: https://doi.org/10.5061/dryad.msbcc2fv7 *
+**Bird data:** *Henry, D.A.W., Lee, A.T.K. & Altwegg, R. (2020). Data from: Can time-to-detection models with fewer survey replicates provide a robust alternative to traditional site-occupancy models? Methods in Ecology and Evolution doi:* https://doi.org/10.5061/dryad.msbcc2fv7
 
-R code: *Add Zenodo doi*
+**R code:** *Add Zenodo doi*
 
 ## Run the simulation analysis
 
