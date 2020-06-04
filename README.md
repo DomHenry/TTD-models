@@ -11,7 +11,7 @@ https://doi.org/10.5061/dryad.msbcc2fv7
 
 **Bird data:** *Henry, D.A.W., Lee, A.T.K. & Altwegg, R. (2020). Data from: Can time-to-detection models with fewer survey replicates provide a robust alternative to traditional site-occupancy models? Methods in Ecology and Evolution doi:* https://doi.org/10.5061/dryad.msbcc2fv7
 
-**R code:** *Add Zenodo doi*
+**R code:** *Henry, D.A.W .2020. DomHenry/TTD-models: MEE supplementary material (Version v1.0.0). Zenodo.* http://doi.org/10.5281/zenodo.3662386
 
 ## Run the simulation analysis
 
