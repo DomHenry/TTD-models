@@ -62,12 +62,12 @@ cat("
 
     # Detection covariate priors #
     # ************************** #
-    gamma1 ~ dnorm(0, 0.1)     # Temperature
-    gamma2 ~ dnorm(0, 0.1)     # Wind speed
-    gamma3 ~ dnorm(0, 0.1)     # Cloud
-    gamma4 ~ dnorm(0, 0.1)     # Time of day (mins)
-    gamma5 ~ dnorm(0, 0.1)     # mins (quad)
-    gamma6 ~ dnorm(0, 0.1)     # Julian day
+    alpha1 ~ dnorm(0, 0.1)     # Temperature
+    alpha2 ~ dnorm(0, 0.1)     # Wind speed
+    alpha3 ~ dnorm(0, 0.1)     # Cloud
+    alpha4 ~ dnorm(0, 0.1)     # Time of day (mins)
+    alpha5 ~ dnorm(0, 0.1)     # mins (quad)
+    alpha6 ~ dnorm(0, 0.1)     # Julian day
     
     # Ecological model for latent occurrence z #
     # **************************************** #
